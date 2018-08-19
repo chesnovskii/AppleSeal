@@ -28,8 +28,8 @@ func (hook ContextHook) Fire(entry *logrus.Entry) error {
 }
 
 func init() {
-	Logger.Formatter = new(logrus.TextFormatter)                      // default
-	Logger.Formatter.(*logrus.TextFormatter).DisableTimestamp = false // remove timestamp from test output
+	Logger.Formatter = new(logrus.TextFormatter)
+	Logger.Formatter.(*logrus.TextFormatter).DisableTimestamp = false
 	Logger.Formatter.(*logrus.TextFormatter).DisableColors = false
 	Logger.Formatter.(*logrus.TextFormatter).TimestampFormat = "2006-01-02 15:04:05"
 	Logger.Formatter.(*logrus.TextFormatter).FullTimestamp = true

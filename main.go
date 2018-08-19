@@ -20,7 +20,7 @@ func main() {
 		logger.Logger.Fatal(err)
 	}
 
-	logger.Logger.Printf("Authorized on account %s", bot.Self.UserName)
+	logger.Logger.Infof("Authorized on account %s", bot.Self.UserName)
 
 	u := tgbotapi.NewUpdate(0)
 	u.Timeout = 60
